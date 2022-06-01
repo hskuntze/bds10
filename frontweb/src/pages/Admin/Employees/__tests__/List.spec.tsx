@@ -48,8 +48,6 @@ describe('Employee list any user tests', () => {
 describe('Employee list ADMIN tests', () => {
   // https://stackoverflow.com/questions/41697513/can-i-mock-functions-with-specific-arguments-using-jest
 
-  // yarn add jest-when @types/jest-when
-
   beforeEach(() => {
     when(hasAnyRoles).calledWith(['ROLE_ADMIN']).mockReturnValue(true);
   });
@@ -73,8 +71,6 @@ describe('Employee list ADMIN tests', () => {
 
 describe('Employee list NOT ADMIN tests', () => {
   // https://stackoverflow.com/questions/41697513/can-i-mock-functions-with-specific-arguments-using-jest
-
-  // yarn add jest-when @types/jest-when
 
   beforeEach(() => {
     when(hasAnyRoles).calledWith(['ROLE_ADMIN']).mockReturnValue(false);
